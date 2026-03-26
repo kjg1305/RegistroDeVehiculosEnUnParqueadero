@@ -15,7 +15,7 @@ public class Carro extends Vehiculo{
     @Override
 
     public void mostrarInfo(){
-        super.mostrarInfo(){
+        super.mostrarInfo();{
             System.out.println("El carro tiene " + getNumeroPuertas() + " puertas.");
         }
     }

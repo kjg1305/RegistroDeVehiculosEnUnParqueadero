@@ -2,13 +2,13 @@ package RegistroDeVehiculosEnUnParqueadero;
 
  public class Tiquete {
     private Vehiculo vehiculo;
-    private String horaEntrada;
-    private String minEntrada;
-    private String horaSalida;
-    private String minSalida;
+    private int horaEntrada;
+    private int minEntrada;
+    private int horaSalida;
+    private int minSalida;
     private double tarifaHora;
     
-    Tiquete (Vehiculo vehiculo, String horaEntrada, String minEntrada, String horaSalida, String minSalida, double tarifaHora){
+    Tiquete (Vehiculo vehiculo, int horaEntrada, int minEntrada, int horaSalida, int minSalida, double tarifaHora){
         this.vehiculo = vehiculo;
         this.horaEntrada = horaEntrada;
         this.minEntrada = minEntrada;
@@ -16,30 +16,28 @@ package RegistroDeVehiculosEnUnParqueadero;
         this.minSalida = minSalida;
         this.tarifaHora = tarifaHora;
     }
-     public String getHoraSalida() {
+     public int getHoraSalida() {
         return horaSalida;
      }
-     public String getMinSalida() {
+     public int getMinSalida() {
         return minSalida;
      }
-     public String getHoraEntrada(){
+     public int getHoraEntrada(){
         return horaEntrada;
      }
-     public String getMinEntrada(){
+     public int getMinEntrada(){
         return minEntrada;
      }
       public double CalcularValor(){
-        int horaEntradaInt = Integer.parseInt(getHoraEntrada());
-        int minEntradaInt = Integer.parseInt(getMinEntrada());
-        int horaSalidaInt = Integer.parseInt(getHoraSalida());
-        int minSalidaInt = Integer.parseInt(getMinSalida());
+  
 
-        int totalMinutosEntrada = (horaEntradaInt * 60) + minEntradaInt;
-        int totalMinutosSalida = (horaSalidaInt * 60) + minSalidaInt;
+        int totalMinutosEntrada = (horaEntrada * 60) + minEntrada;
+        int totalMinutosSalida = (horaSalida * 60) + minSalida;
 
         int minutosTotales = totalMinutosSalida - totalMinutosEntrada;
         double horasTotales = minutosTotales / 60.0;
 
-        return horasTotales * tarifaHora;
+        double valor = horasTotales * tarifaHora;
+        return Math.round(valor * 100.0) / 100.0;
       }
  }

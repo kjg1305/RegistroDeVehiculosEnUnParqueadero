@@ -1,9 +1,9 @@
-package RegistroDeVehiculosEnUnParqueadero
+package RegistroDeVehiculosEnUnParqueadero;
 
 public class Vehiculo {
 
     private String placa;
-    private Sting marca;
+    private String marca;
     private String color;
 
     Vehiculo ( String placa , String marca , String color){
@@ -15,15 +15,9 @@ public class Vehiculo {
     public String getPlaca (){
         return placa;
     }
-    public void setPlaca (String placa ){
-        this.placa = placa ;
-    }
 
     public String getColor (){
         return color ;
-    }
-    public void setColor (String  color ){
-        this.color = color ;
     }
 
     public String getMarca (){
@@ -34,9 +28,9 @@ public class Vehiculo {
     }
 
     public void mostrarInfo(){
-        System.out.println("la placa del vehiculo es :"+getPlaca());
-        System.out.println("la marca del vehiculo es :"+getMarca());
-        System.out.println("la color del vehiculo es :"+getColor());
+        System.out.println("la placa del vehiculo es : " + getPlaca());
+        System.out.println("la marca del vehiculo es : " + getMarca());
+        System.out.println("la color del vehiculo es : " + getColor());
 
     }
 

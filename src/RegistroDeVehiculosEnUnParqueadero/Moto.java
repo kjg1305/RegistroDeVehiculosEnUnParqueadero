@@ -15,7 +15,7 @@ public class Moto extends Vehiculo{
     @Override
 
     public void mostrarInfo(){
-        super.mostrarInfo(){
+        super.mostrarInfo() ;{
             System.out.println("La moto tiene cajuela:" + getTieneCajuela());
         }
     }
